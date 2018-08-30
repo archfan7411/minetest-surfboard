@@ -241,7 +241,7 @@ minetest.register_craftitem("surfboard:board", {
 		if not is_water(pointed_thing.under) then
 			return itemstack
 		end
-		if minetest.is_protected(node) and not minetest.is_protected(node, placer) then
+		if minetest.is_protected(node, placer) then
 			return itemstack
 		end
 			
