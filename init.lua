@@ -240,11 +240,11 @@ minetest.register_craftitem("surfboard:board", {
 		end
 		if not is_water(pointed_thing.under) then
 			return itemstack
-		
+		end
 		if minetest.is_protected(node) and not minetest.is_protected(node, placer) then
 			return itemstack
-		
 		end
+			
 		pointed_thing.under.y = pointed_thing.under.y + 0.5
 		boat = minetest.add_entity(pointed_thing.under, "surfboard:board")
 		if boat then
